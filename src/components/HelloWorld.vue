@@ -6,14 +6,14 @@
     <hr>
     <div>
       <p class="mt-3 h5">{{ $store.state.counter }}</p>
-      <button class="btn btn-info mr-2" @click="$store.commit('count', 1)">
+      <button class="btn btn-info mr-2" @click="$store.commit({type: 'count', message: 'add 1!', add: 1})">
         add1
       </button>
-      <button class="btn btn-info mr-2" @click="$store.commit('count', 2)">
-        add2
+      <button class="btn btn-info mr-2" @click="$store.commit({type: 'count', message: 'add 5!', add: 5})">
+        add5
       </button>
-      <button class="btn btn-info mr-2" @click="$store.commit('count', 3)">
-        add3
+      <button class="btn btn-info mr-2" @click="$store.commit({type: 'count', message: 'add 10!', add: 10})">
+        add10
       </button>
       <button class="btn btn-secondary" @click="$store.commit('reset')">
         reset

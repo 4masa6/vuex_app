@@ -8,10 +8,12 @@ export const store = createStore({ // createStoreの引数にストアに関す�
     }
   },
   mutations: {
-    count: (state, n) => {
-      state.counter += n
+    count: (state, obj) => {
+      state.message = obj.message
+      state.counter += obj.add
     },
-    reset: (state) => {
+    reset: (state, obj) => {
+      state.message = 'reset!'
       state.counter = 0
     }
   }
