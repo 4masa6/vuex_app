@@ -4,15 +4,9 @@
     <!-- $storeはstoreに保存している値のオブジェクト。$store.state.値 でアクセスできる -->
     <p class="mt-3 h5">{{ $store.state.message }}</p>
     <hr>
-    <div>
-      <p class="mt-3 h5">{{ $store.state.counter }}</p>
-      <button class="btn btn-info mr-2" @click="$store.dispatch('doit')">
-        add
-      </button>
-      <button class="btn btn-secondary" @click="$store.commit('reset')">
-        reset
-      </button>
-    </div>
+    <p>clicked: {{ $store.state.counter }}</p>
+    <button class="btn btn-primary" @click="$store.commit('doit')">doit</button>
+    <button class="btn btn-secondary" @click="$store.commit('reset')">reset</button>
   </div>
 </template>
 
